@@ -1,0 +1,19 @@
+.Cbtn{
+    border: none;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 5px;
+}
+#edit{
+    background-color: green;
+
+}
+#del{
+    background-color: red;
+}
+td{
+    text-align: center;
+}
+thead tr th{
+    text-align: center;
+}

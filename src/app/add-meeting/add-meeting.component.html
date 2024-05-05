@@ -1,0 +1,24 @@
+<div class="container-fluid w-50 float-start mt-4 p-2">
+    <h4 class="mb-4">Add Meeting</h4>
+    <div class="mb-3">
+        <label for="InputAgenda" class="form-label">Meeting Agenda</label>
+        <input type="text" class="form-control" id="InputAgenda"  [(ngModel)]="MeetingAgenda" placeholder="Enter meeting agenda">
+    </div>
+
+    <div class="mb-3">
+        <label for="NoOfPeople" class="form-label">Number of Participants</label>
+        <input type="number" class="form-control" id="NoOfPeople"  [(ngModel)]="NoOfPeople" placeholder="Enter number of participants">
+    </div>
+
+    <div class="mb-3">
+        <label for="inputDate" class="form-label">Meeting date</label>
+        <input type="date" class="form-control" id="inputDate" [(ngModel)]="MeetingDate">
+    </div>
+
+    <div class="mb-3">
+        <label for="inputTime" class="form-label">Meeting Time</label>
+        <input type="time" class="form-control" id="inputTime" [(ngModel)]="MeetingTime" placeholder="Enter meeting time">
+    </div>
+
+    <button class="btn btn-primary" (click)="addMeeting()">Add Meeting</button>
+</div>

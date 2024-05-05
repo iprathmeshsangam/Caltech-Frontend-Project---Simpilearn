@@ -1,0 +1,34 @@
+<div class="container-fluid w-50 float-start mt-1 p-2">
+    <h4 class="mb-3">Edit Client</h4>
+
+    <div class="mb-3">
+        <label for="InputId" class="form-label">Client Name</label>
+        <input type="email" class="form-control" id="InputId" [(ngModel)]="id" disabled>
+    </div>
+
+    <div class="mb-3">
+        <label for="InputName" class="form-label">Client Name</label>
+        <input type="email" class="form-control" id="InputName" [(ngModel)]="clientName" placeholder="Mr. John">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="clientEmail"
+            placeholder="abc@hotmail.com">
+    </div>
+
+    <div class="mb-3">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress" [(ngModel)]="clientAddress"
+            placeholder="1234 Main St">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+        <input type="phone" class="form-control" id="inputPhone" [(ngModel)]="clientPhone" placeholder="123-456-7890"
+            maxlength="10">
+    </div>
+
+    <button class="btn btn-success" (click)="updateClient()">Edit Client</button>
+    <button class="btn btn-outline-dark m-2" (click)="back()">Back</button>
+</div>

@@ -1,0 +1,28 @@
+<div class="container-fluid mt-4 p-2">
+    <h4 class="mb-4">Meetings Records</h4>
+    <table class="table table-bordered" *ngIf="meetings && meetings.length > 0">
+        <thead>
+            <tr>
+                <th># - ID</th>
+                <th>Meeting Agenda</th>
+                <th>No of People</th>
+                <th>Meeting Date</th>
+                <th>Meeting Time</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let meeting of meetings">
+                <td>{{meeting.meeting_id}}</td>
+                <td>{{meeting.meeting_agenda}}</td>
+                <td>{{meeting.no_of_people}}</td>
+                <td>{{meeting.meeting_date}}</td>
+                <td>{{meeting.meeting_time}}</td>
+                <td><button [routerLink]="'/editmeeting/'+(meeting.meeting_id)" class="Cbtn" id="edit" (click)="editMeeting(meeting.meeting_id)">Edit</button></td>
+                <td><button (click)="deleteMeeting(meeting.meeting_id)" class="Cbtn" id="del">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!meetings || meetings.length === 0">No data Meeting added</p>
+    </div>

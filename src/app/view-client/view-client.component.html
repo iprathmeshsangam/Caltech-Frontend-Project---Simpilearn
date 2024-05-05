@@ -1,0 +1,28 @@
+<div class="container-fluid mt-4 p-2">
+<h4 class="mb-4">Client Records</h4>
+<table class="table table-bordered" *ngIf="clients && clients.length > 0">
+    <thead>
+        <tr>
+            <th># - ID</th>
+            <th>Client Name</th>
+            <th>Client Email</th>
+            <th>Client Address</th>
+            <th>Client Phone Number</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let client of clients">
+            <td>{{client.client_id}}</td>
+            <td>{{client.client_name}}</td>
+            <td>{{client.client_email}}</td>
+            <td>{{client.client_address}}</td>
+            <td>{{client.client_phone}}</td>
+            <td><button [routerLink]="'/editclient/'+(client.client_id)" class="Cbtn" id="edit">Edit</button></td>
+            <td><button (click)="deleteClient(client.client_id)" class="Cbtn" id="del">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<p *ngIf="!clients || clients.length === 0">No data clients added</p>
+</div>

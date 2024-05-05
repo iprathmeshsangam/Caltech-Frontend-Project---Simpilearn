@@ -1,0 +1,18 @@
+.display-container{
+    padding: 24px;
+    height: 90vh;
+    width: 100%;
+    background-color: #F8F9FA;
+    margin: 15px;
+}
+#left{
+    margin: 15px;
+    background-color: #fff;
+}
+#right{
+    background-color: #fff;
+}
+.active{
+    background-color: #0C6EFD;
+    color: #fff;
+}

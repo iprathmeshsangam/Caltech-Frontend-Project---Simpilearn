@@ -1,0 +1,22 @@
+<div class="container-fluid d-inline-flex justify-evenly">
+<div class="diplay-container w-25 rounded-2" id="left">
+    <h4 class="text-left m-4 display-6">Dashboard</h4>
+    
+    <ul class="nav nav-pills nav-fill d-flex flex-column m-4 gap-2">
+        <li class="nav-item">
+            <a [routerLink]="['/viewclient']" class="nav-link border" routerLinkActive="active">View Client Data</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/viewmeeting']" class="nav-link border" routerLinkActive="active">View Meeting Data</a>
+        </li>
+    </ul>
+</div>
+<div class="display-container w-75 rounded-2" id="right">
+    <h4 class="display-6">Hi, {{username | uppercase}}</h4>
+    <p class="mt-1">{{currentDate | date}}</p>
+    <router-outlet />
+</div>
+</div>
+<footer>
+    <p class="text-center text-black-50">Heena Software solutions | Client Management Project by Prathmesh Sangam | Simplilearn Project | All Rights Reserved.</p>
+</footer>
