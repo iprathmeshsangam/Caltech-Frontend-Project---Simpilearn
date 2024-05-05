@@ -42,7 +42,7 @@ To deploy this project run
 ```bash
     node server.js
 ```
-**For running Server**
+**For running Meeting Server**
 ```bash
     node server2.js
 ```
